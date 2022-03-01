@@ -3,9 +3,7 @@
 
     numarul cifrelor 0 in care se termina numarul produs al numerelor citite.
 */
-#include <iostream>
-
-using namespace std;
+#include <stdio.h>
 
 int produs_numere(){
     /*
@@ -13,12 +11,12 @@ int produs_numere(){
     post: returneaza produsul numerelor, int
     */
     int x, p = 1;
-    scanf("%d", &x);
+    scanf_s("%d", &x);
     if(x == 0)
         return 0;
     while(x != 0){
         p *= x;
-        scanf("%d", &x);
+        scanf_s("%d", &x);
     }
 
     return p;
@@ -45,11 +43,12 @@ int nr_cif_0(int nr){
 int main()
 {
     int option;
-    while(true){
+    while(1){
         printf("\n1. Problema 9\n");
         printf("0. Exit\n");
         printf("Optiunea dvs: ");
-        scanf("%d", &option);
+        scanf_s("%d", &option);
+
         if(option == 0)
             return 0;
         else if(option == 1){
